@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Modifica Artista</title>
+<link rel="stylesheet" href="/css/artista.css">
+</head>
+<body>
+
+<header>
+
+	
+		<div class="header-links">
+		    <a href="/">Home</a>
+            <a href="/logout">Logout</a>
+        </div>
+	
+	</header>
+
+
+<h1>Modifica Artista</h1>
+	<main>
+	<div class="artista-info">
+	<form th:action="@{/admin/formModificaArtista}" method="POST" >
+	<input type="hidden" name="id" th:value="${artista.id}" />
+  		
+		<div class="info-item">
+		<label>
+			 <span><a>Nome:</a> <span><input type="text" name="nuovoNome" placeholder="Nuovo nome" th:value="${artista.nome}" /></span>
+		   
+		   
+		    
+		</label>
+</div><div class="info-item">
+		<label>
+			<a>Cognome:</a> <span><input type="text" name="nuovoCognome" placeholder="Nuovo cognome" th:value="${artista.cognome}" /></span>
+
+		    </span>
+		    
+		    </span>
+		</label></div>
+<div class="info-item">
+		<label>
+			<a>Citta:</a> <span><input type="text" name="nuovaCitta" placeholder="Nuova citta" th:value="${artista.citta}" /></span>
+		    
+		    </label>
+			</div>
+		</label>
+		<div class="info-item"><label>
+			<a>Data di nascita:</a> <span><input type="text" name="nuovaDataDiNascita" placeholder="Nuova data di nascita" th:value="${artista.dataDiNascita}" /></span>
+		    
+		    </div>
+		</label>
+		<div class="info-item"><label>
+			<a>Data di Morte:</a> <span><input type="text" name="nuovaDataDiMorte" placeholder="Nuova data di morte" th:value="${artista.dataDiMorte}" /></span>
+		    
+		    </div>
+		
+		    
+			
+		</label></div><div class="info-item">
+		<label>
+			<span><button type="submit">Conferma</button></span>
+		</label></div>
+	</form>
+	</div>
+	</main>
+
+</body>
+</html>

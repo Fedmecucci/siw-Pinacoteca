@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Artisti</title>
+<link rel="stylesheet" href="/css/paginaArtisti.css" />
+</head>
+<body>
+<header>
+  
+	<div class="header-links">
+           <a href="/">Home</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </header>
+    
+ <h1>Artisti</h1>
+    <div class="container">
+        <div th:if="${artisti == null || artisti.isEmpty()}">Non ci sono artisti nel sistema</div>
+        <div th:each="artista : ${artisti}" class="artista-item">
+            <a th:href="@{'/artista' + ${artista.id}}" th:text="${artista.nome}"></a>
+            <a th:href="@{'/artista' + ${artista.id}}" th:text="${artista.cognome}"></a>  
+<!--             <a th:href="@{'/opera' + ${opera.id}}" th:text="${opera.tecnica}"></a>  -->
+<!--             <a th:href="@{'/opera' + ${opera.id}}" th:text="${opera.collocazione}"></a>  -->
+          
+            <img th:src="'data:image/jpeg;base64,' + ${artista.immagine}" alt="Immagine artista">
+        </div>
+</body>
+</html>

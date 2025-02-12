@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Opera</title>
+<link rel="stylesheet" href="/css/opera.css">
+</head>
+<body>
+
+	<div class="header-links">
+		<a href="/">Home</a> 
+		<a href="/login">Login</a>
+	</div>
+
+	<main>
+		<h1 th:text="${opera.titolo}">Titolo opera</h1>
+
+		<div class="opera-info">
+			<div class="info-item">
+				<label>Anno: <span th:text="${opera.anno}">anno</span></label>
+			</div>
+			<div class="info-item">
+				<label>tecnica: <span th:text="${opera.tecnica}">tecnica</span></label>
+			</div>
+			<div class="info-item">
+				<label>Collocazione: <span th:text="${opera.collocazione}">collocazione</span></label>
+			</div>
+			
+			
+		</div>
+
+
+		<img th:src="'data:image/jpeg;base64,' + ${opera.immagine}"
+			alt="Immagine opera">
+
+
+		<div class="no-opera" th:unless="${opera}">Non esiste</div>
+	</main>
+
+</body>
+</html>

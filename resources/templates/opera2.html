@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Nuova Opera</title>
+<link rel="stylesheet" href="/css/op.css">
+</head>
+<body>
+
+
+    <h1>Aggiungi Opera</h1>
+    <form th:action="@{/admin/formCreaOpera}" method="POST" th:object="${opera}" enctype="multipart/form-data">
+        <div th:if="${#fields.hasGlobalErrors()}">
+            <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
+        </div>
+
+        <div class="form-group">
+            <label>titolo:</label>
+            <span><input type="text" th:field="${opera.titolo}"></span>
+            <span th:if="${#fields.hasErrors('titolo')}" th:errors="*{titolo}"></span>
+        </div>
+
+        <div class="form-group">
+            <label>anno:</label>
+            <span><input type="text" th:field="${opera.anno}"></span>
+            <span th:if="${#fields.hasErrors('anno')}" th:errors="*{anno}"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Tecnica:</label>
+            <span><input type="text" th:field="${opera.tecnica}"></span>
+            <span th:if="${#fields.hasErrors('tecnica')}" th:errors="*{tecnica}"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Collocazione:</label>
+            <span><input type="text" th:field="${opera.collocazione}"></span>
+            <span th:if="${#fields.hasErrors('collocazione')}" th:errors="*{collocazione}"></span>
+        </div>
+      
+      
+
+       
+	<div class="form-group">
+  <span>Foto dell'opera:</span> <input type="file"
+					id="imageFile" name="imageFile" >
+				
+                
+</div>
+        <div class="form-group">
+            <span><button type="submit">Conferma</button></span>
+        </div>
+    </form>
+</body>
+</html>

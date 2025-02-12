@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Nuovo Artista</title>
+<link rel="stylesheet" href="/css/ar.css">
+</head>
+<body>
+
+
+    <h1>Aggiungi Artista</h1>
+    <form th:action="@{/admin/formCreaArtista}" method="POST" th:object="${artista}" enctype="multipart/form-data">
+        <div th:if="${#fields.hasGlobalErrors()}">
+            <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
+        </div>
+
+        <div class="form-group">
+            <label>Nome:</label>
+            <span><input type="text" th:field="${artista.nome}"></span>
+            <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Cognome:</label>
+            <span><input type="text" th:field="${artista.cognome}"></span>
+            <span th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Citta:</label>
+            <span><input type="text" th:field="${artista.citta}"></span>
+            <span th:if="${#fields.hasErrors('citta')}" th:errors="*{citta}"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Data di nascita:</label>
+            <span><input type="text" th:field="${artista.dataDiNascita}"></span>
+            <span th:if="${#fields.hasErrors('dataDiNascita')}" th:errors="*{dataDiNascita}"></span>
+        </div>
+        
+      <div class="form-group">
+            <label>Data di Morte:</label>
+            <span><input type="text" th:field="${artista.dataDiMorte}"></span>
+            <span th:if="${#fields.hasErrors('dataDiMorte')}" th:errors="*{dataDiMorte}"></span>
+        </div>
+      
+
+       
+	<div class="form-group">
+  <span>Foto dell'Artista:</span> <input type="file"
+					id="imageFile" name="imageFile" >
+				
+                
+</div>
+        <div class="form-group">
+            <span><button type="submit">Conferma</button></span>
+        </div>
+    </form>
+
+</body>
+</html>

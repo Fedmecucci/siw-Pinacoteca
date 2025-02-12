@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Artista</title>
+<link rel="stylesheet" href="/css/artista.css">
+</head>
+<body>
+<header>
+    
+	
+        <div class="header-links">
+            <a href="/admin/modificaArtista">Modifica</a>
+            
+            <a href="/login">Login</a>
+             
+        </div>
+        
+         </header>
+         
+          <main>
+        <h1 th:text="${artista.nome}">nome artista</h1>
+
+        <div class="opera-info">
+            <div class="info-item">
+                <label>Cognome:
+                <span th:text="${artista.cognome}">cognome</span></label>
+            </div>
+            <div class="info-item">
+                <label>Citta:
+                <span th:text="${artista.citta}">citta</span></label>
+            </div>
+            <div class="info-item">
+                <label>Data di nascita:
+                <span th:text="${artista.dataDiNascita}">data di nascita</span></label>
+            </div>
+            <div class="info-item">
+                <label>Data di Morte:
+                <span th:text="${artista.dataDiMorte}">data di morte</span></label>
+            </div>
+          
+        </div>
+
+        <div class="no-artista" th:unless="${artista}">Non esiste</div>
+    </main>
+    
+
+</body>
+</html>

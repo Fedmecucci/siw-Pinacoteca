@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+     background-color:#f4f4f4; 
+/*     background-image:url('images/homepage5.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: blue;
+  
+}
+
+
+
+.titolo{
+	font-family:Montserrat;
+    color:maroon;
+	font-size: 40px;
+	text-align: center; 
+	
+}
+
+h1{
+	color: #D4AF37;
+}
+
+.titolo p{
+	
+	font-family:monospace;
+	color:black;
+	font-size: 22px;
+	  text-align: center; 
+	  margin:15px;
+	    justify-content: space-between; 
+	padding: 1.3em; /* Aumenta il padding per un aspetto più grande */
+	padding-right: 20px;
+}
+
+
+
+header {
+     background-color:#D4AF37; /* Sfondo nero traslucido */
+            color: white; /* Testo bianco per contrastare il background nero */
+            height: 1.8em; /* Aumenta l'altezza dell'header */
+            margin-bottom: 0.5em;
+            padding: 1.3em; /* Aumenta il padding per un aspetto più grande */
+            text-align: right; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
+        }
+
+        .header-links {
+            display: flex;
+            gap: 6em; /* Spazio tra i link */
+            margin-left: 60em;
+            font-family: 'Dmsans', sans-serif; /* Cambia il font dei link */
+            font-style: italic;
+        }
+        .header-links2 {
+            display: flex;
+            gap: 6em; /* Spazio tra i link */
+            margin-left: 34em;
+            font-family: 'Dmsans', sans-serif; /* Cambia il font dei link */
+            font-style: italic;
+        }
+         .header-links3 {
+            display: flex;
+            gap: 6em; /* Spazio tra i link */
+            margin-left: 43em;
+            font-family: 'Dmsans', sans-serif; /* Cambia il font dei link */
+            font-style: italic;
+            
+        }
+        .header-links4 {
+            display: flex;
+            gap: 4em; /* Spazio tra i link */
+            margin-left: 35em;
+            font-family: 'Dmsans', sans-serif; /* Cambia il font dei link */
+            font-style: italic;
+        }
+
+         header a { 
+            text-decoration: none; 
+            color: rgb(0, 0, 0); /* Cambia il colore del testo dei link per adattarsi al nuovo background */
+            font-size: 5em; /* Puoi modificare la dimensione del font se necessario */
+            font-size: 1.4em; /* Modifica la dimensione del font dei link */
+        }
+        .header-links a:hover {
+    color: white;
+}
+   .header-links2 a:hover {
+    color:white;
+}
+    
+
+.main-section {
+	
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente il contenuto */
+    align-items: center; /* Centra verticalmente il contenuto */
+   /* Altezza minima pari all'altezza della finestra meno l'altezza dell'intestazione */
+      
+}
+
+.centered-photo {
+	
+    max-width: 10%; /* Larghezza massima della foto al 100% della larghezza del contenitore */
+    text-align: center; /* Allinea la foto al centro */
+}
+
+.centered-photo img {
+    max-width: 110%; /* Larghezza massima dell'immagine al 100% della larghezza del suo contenitore */
+    height: auto; /* Altezza automatica mantenendo l'aspetto originale */
+    display: block; /* Rende l'immagine un blocco per centrarla correttamente */
+    margin: 0 auto; /* Margine automatico per centrare l'immagine orizzontalmente */
+}
+
+
+
+   .immagine {
+    position: absolute;
+    top: -0px;
+    left: -38%;
+    overflow: hidden; /*Assicura che l'immagine non fuoriesca dai bordi dell'header */
+}
+
+.immagine img {
+    max-width:40%;  /* Imposta una larghezza massima, ad esempio 100px */
+    height: auto;   /*Lascia che l'altezza si adatti alla larghezza mantenendo le proporzioni*/
+}
+/* p{ */
+/* 	color:black; */
+/* 	 margin-top:-35%;  */
+/* 	  margin-left:10%;  */
+/* 	 font-family: Raleway, "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif; */
+/* 	 font-style: italic; */
+/* 	  max-width: 70%; */
+/* 	  font-size: 35px; */
+/* 	  padding-right: 10px; */
+/* }	 */
+
+
+.main-section {
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente il contenuto */
+    align-items: center; /* Centra verticalmente il contenuto */
+    min-height: calc(100vh - 3.3em); /* Altezza minima pari all'altezza della finestra meno l'altezza dell'intestazione */
+    
+      background-color: rgba(255, 255, 255, 0.5); /* Sfondo bianco traslucido */
+     margin-top: 0%; /* Imposta margine superiore a 0 */
+}
+.main-section img {
+            margin-top: 60px; /* Abbassa il logo di 20px */
+        }
+.centered-photo {
+    max-width: 100%; /* Larghezza massima della foto al 100% della larghezza del contenitore */
+    text-align: center; /* Allinea la foto al centro */
+}
+
+.centered-photo img {
+    max-width: 550px; /* Larghezza massima dell'immagine al 100% della larghezza del suo contenitore */
+    height: auto; /* Altezza automatica mantenendo l'aspetto originale */
+    display: block; /* Rende l'immagine un blocco per centrarla correttamente */
+    margin: 0 auto; /* Margine automatico per centrare l'immagine orizzontalmente */
+    size: 130px;
+}
+
+

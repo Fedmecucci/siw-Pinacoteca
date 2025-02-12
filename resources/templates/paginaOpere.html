@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Collezione</title>
+<link rel="stylesheet" href="/css/paginaOpere.css" />
+</head>
+<body>
+<header>
+  
+	
+
+        <div class="header-links">
+           <a href="/">Home</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </header>
+
+    <h1>Collezione</h1>
+    <div class="container">
+        <div th:if="${opere == null || opere.isEmpty()}">Non ci sono opere nel sistema</div>
+        <div th:each="opera : ${opere}" class="opera-item">
+            <a th:href="@{'/opera' + ${opera.id}}" th:text="${opera.titolo}"></a> 
+<!--             <a th:href="@{'/opera' + ${opera.id}}" th:text="${opera.tecnica}"></a>  -->
+<!--             <a th:href="@{'/opera' + ${opera.id}}" th:text="${opera.collocazione}"></a>  -->
+          
+            <img th:src="'data:image/jpeg;base64,' + ${opera.immagine}" alt="Immagine Opera">
+        </div>
+
+</body>
+</html>
